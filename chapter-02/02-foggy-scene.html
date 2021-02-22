@@ -35,6 +35,7 @@
         // create a scene, that will hold all our elements such as objects, cameras and lights.
         var scene = new THREE.Scene();
         //scene.fog=new THREE.FogExp2( 0xffffff, 0.015 );
+        // 雾化效果，near,far(控制雾化开始和结束的地方)
         scene.fog = new THREE.Fog(0xffffff, 0.015, 100);
 
         // create a camera, which defines where we're looking at.

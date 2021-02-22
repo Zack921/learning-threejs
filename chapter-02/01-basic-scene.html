@@ -37,7 +37,7 @@
 
         // create a camera, which defines where we're looking at.
         var camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
-        scene.add(camera);
+        scene.add(camera); // camera会自动被添加到场景中，但最好还是手动添加
 
         // create a render and set the size
         var renderer = new THREE.WebGLRenderer();
@@ -135,7 +135,7 @@
             stats.update();
 
             // rotate the cubes around its axes
-            scene.traverse(function (e) {
+            scene.traverse(function (e) { // 类似map
                 if (e instanceof THREE.Mesh && e != plane) {
 
                     e.rotation.x += controls.rotationSpeed;
